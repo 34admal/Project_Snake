@@ -78,7 +78,7 @@ body {
   align-items: center;
 }
 
-@media screen and (max-width: 375px) {.game-score {
+@media screen and (max-width: 768px) {.game-score {
   min-width: auto;
   padding: 10px 15px;
   height: 50px;
