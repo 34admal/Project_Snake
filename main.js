@@ -210,3 +210,7 @@ document.querySelector("#arrowDWN").addEventListener("click", () => {
   snake.dy = config.sizeCell;
     snake.dx = 0;
 });
+document.querySelector("#arrowR").addEventListener("click", () => {
+  snake.dx = config.sizeCell;
+    snake.dy = 0;
+});
