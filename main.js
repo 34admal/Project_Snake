@@ -203,3 +203,10 @@ document.addEventListener("keydown", function (e) {
 });
 document.querySelector("#startGame").addEventListener("click", gameLoop);
 document.querySelector("#bestRes").addEventListener('click',getArrScores)
+document.querySelector("#arrowUP").addEventListener(
+  "click",
+  () => {
+    snake.dy = -config.sizeCell;
+    snake.dx = 0;
+  }
+  )
