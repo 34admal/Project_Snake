@@ -80,9 +80,7 @@ function drawSnake() {
 
         saveScore();
 
-       
-        cancelAnimationFrame(anim)
-       
+        cancelAnimationFrame(anim);
 
         refreshGame();
       }
@@ -137,22 +135,19 @@ function saveScore() {
 }
 function getArrScores() {
   const arrScores = JSON.parse(localStorage.personsData);
-  let result = arrScores.map(x => x.score)
+  let result = arrScores.map((x) => x.score);
 
-
-let result1 = result.sort(function (a, b) {
-  return b - a;
-
-
-})
-alert(`
+  let result1 = result.sort(function (a, b) {
+    return b - a;
+  });
+  alert(`
 TOP-5:
 1 : ${result1[0]}
 2 : ${result1[1]}
 3 : ${result1[2]}
 4 : ${result1[3]}
 5 : ${result1[4]}
-        `)
+        `);
 }
 
 function drawBerry() {
@@ -202,11 +197,12 @@ document.addEventListener("keydown", function (e) {
   }
 });
 document.querySelector("#startGame").addEventListener("click", gameLoop);
-document.querySelector("#bestRes").addEventListener('click',getArrScores)
-document.querySelector("#arrowUP").addEventListener(
-  "click",
-  () => {
-    snake.dy = -config.sizeCell;
-    snake.dx = 0;
-  }
-  )
+document.querySelector("#bestRes").addEventListener("click", getArrScores);
+document.querySelector("#arrowUP").addEventListener("click", () => {
+  snake.dy = -config.sizeCell;
+  snake.dx = 0;
+});
+document.querySelector("#arrowL").addEventListener("click", () => {
+  snake.dx = -config.sizeCell;
+  snake.dy = 0;
+});
